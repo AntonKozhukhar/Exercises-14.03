@@ -1,0 +1,15 @@
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 50%;
+    margin: 0 auto;
+}
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px 0;
+    height: 20px;
+    cursor: pointer;
+}

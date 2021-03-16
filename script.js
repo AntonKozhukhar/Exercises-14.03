@@ -28,8 +28,7 @@ console.log(getParams(str)); */
 	link: 'http://link.com/product1'
 }] */
 
-let links = document.getElementsByTagName('a');
-
+/* let links = document.getElementsByTagName('a');
 function getArr(element) {
 	let arr = [];
 	for (let i = 0; i < element.length; i++) {
@@ -37,10 +36,25 @@ function getArr(element) {
 		let name = element[i].innerHTML;
 		let href = element[i].getAttribute('href');
 		obj.name = name;
-		obj.link = href.slice(1, -1);
+		obj.link = href;
 		arr.push(obj);
 	}
 	return arr;
 }
+console.log(getArr(links)); */
 
-console.log(getArr(links));
+/* 3. Дана таблица с пользователями с двумя колонками: имя и фамилия.  Сделайте так, чтобы при клике на любую ячейку появлялся prompt, с помощью которого можно изменить текст ячейки. Задачу решите с помощью делегирования (то есть событие должно быть навешано на table). */
+
+let tr = document.createElement('tr');
+let td1 = document.createElement('td');
+let td2 = document.createElement('td');
+
+table.appendChild(tr);
+tr.appendChild(td1);
+tr.appendChild(td2);
+
+table.addEventListener('click', function (e) {
+	if (e.target.tagName == 'TD') {
+		e.target.innerHTML = prompt('Enter value');
+	}
+});
